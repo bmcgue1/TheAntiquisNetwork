@@ -19,7 +19,7 @@ public class Industry {
     @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
-    @Column(name = "industryName" ,nullable = false)
+    @Column(name = "industryName", nullable = false)
     private String industryName;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "industry")
@@ -30,7 +30,6 @@ public class Industry {
 
     @ManyToOne
     private SubIndustry subIndustry;
-
 
 
 }

@@ -1,6 +1,5 @@
 package com.antiquis.antiquisNetwork.networkGroup;
 
-import com.antiquis.antiquisNetwork.company.Company;
 import com.antiquis.antiquisNetwork.network.Network;
 import lombok.Data;
 

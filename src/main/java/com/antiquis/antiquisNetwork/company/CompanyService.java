@@ -9,7 +9,7 @@ public class CompanyService {
     @Autowired
     private CompanyRepository companyRepository;
 
-    public void addCompany(Company company){
+    public void addCompany(Company company) {
         companyRepository.save(company);
     }
 
