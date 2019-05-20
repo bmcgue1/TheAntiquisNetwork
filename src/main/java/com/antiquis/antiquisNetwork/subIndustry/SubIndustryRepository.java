@@ -1,4 +1,6 @@
 package com.antiquis.antiquisNetwork.subIndustry;
 
-public interface SubIndustryRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SubIndustryRepository extends JpaRepository<SubIndustry, Long> {
 }

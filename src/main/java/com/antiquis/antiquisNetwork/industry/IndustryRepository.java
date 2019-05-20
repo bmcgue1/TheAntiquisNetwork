@@ -1,4 +1,6 @@
 package com.antiquis.antiquisNetwork.industry;
 
-public interface IndustryRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IndustryRepository extends JpaRepository<Industry, Long> {
 }

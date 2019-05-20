@@ -1,8 +1,14 @@
 package com.antiquis.antiquisNetwork.company;
 
+import com.antiquis.antiquisNetwork.industry.Industry;
+import com.antiquis.antiquisNetwork.network.Network;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -11,15 +17,22 @@ public class Company {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true, nullable = false)
+    @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
-    @Column(unique = true, nullable = false)
+    @Column(name = "companyName",unique = true, nullable = false)
     private String companyName;
 
+    @Column(name = "description")
     private String description;
 
+    @ManyToOne
+    @JoinColumn(name = "industryId")
+    private Industry industry;
 
-    @Column(nullable = false)
-    private Long industryId;
+    //TODO ADD: Company Logo
+
+    @OneToOne
+    @JoinColumn(name = "networkId")
+    private Network network;
 }
