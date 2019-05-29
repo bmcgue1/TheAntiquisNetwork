@@ -1,4 +1,4 @@
-package com.antiquis.antiquisNetwork.networkGroup;
+package com.antiquis.antiquisNetwork.networkMembers;
 
 import com.antiquis.antiquisNetwork.network.Network;
 import lombok.Data;
@@ -7,8 +7,8 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@Table(name = "networkGroup")
-public class NetworkGroup {
+@Table(name = "networkMembers")
+public class NetworkMember {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,6 +16,6 @@ public class NetworkGroup {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name = "networkid")
+    @JoinColumn(name = "networkId")
     private Network network;
 }

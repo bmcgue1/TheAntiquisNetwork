@@ -1,7 +1,7 @@
 package com.antiquis.antiquisNetwork.network;
 
 import com.antiquis.antiquisNetwork.company.Company;
-import com.antiquis.antiquisNetwork.networkGroup.NetworkGroup;
+import com.antiquis.antiquisNetwork.networkMembers.NetworkMember;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
@@ -28,6 +28,6 @@ public class Network {
     @JsonIdentityInfo(
             generator = ObjectIdGenerators.PropertyGenerator.class,
             property = "id")
-    private List<NetworkGroup> networkGroups = new ArrayList<>();
+    private List<NetworkMember> networkMembers = new ArrayList<>();
 
 }

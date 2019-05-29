@@ -17,7 +17,7 @@ public class User {
     private long id;
 
     @Column(name = "userName", unique = true, nullable = false)
-    private String userName;
+    private String username;
 
     //Many Users can be apart of one company
     @ManyToOne
