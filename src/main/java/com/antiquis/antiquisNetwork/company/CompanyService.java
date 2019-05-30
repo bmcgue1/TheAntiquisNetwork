@@ -17,7 +17,6 @@ public class CompanyService {
         companyRepository.save(company);
     }
 
-
     //Get all Company
     public List<Company> getAllCompanies() {
         List<Company> companies = new ArrayList<>();
@@ -26,7 +25,7 @@ public class CompanyService {
     }
 
     //Company by id
-    public Optional<Company> getCompany(Long id) {
+    public Optional<Company> getCompanyByID(Long id) {
         Optional<Company> company = companyRepository.findById(id);
         return company;
     }
