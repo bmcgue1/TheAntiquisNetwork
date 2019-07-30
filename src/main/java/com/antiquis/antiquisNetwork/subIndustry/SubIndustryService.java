@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class SubIndustryService {
@@ -19,23 +18,13 @@ public class SubIndustryService {
         return subIndustries;
     }
 
-    //SubIndustry by id
-    public Optional<SubIndustry> getSubIndustry(Long id) {
-        Optional<SubIndustry> byId = subIndustryRepository.findById(id);
-        return byId;
-    }
-
     //Add SubIndustry
-    public void addSubIndustrys(SubIndustry subIndustry) {
-        subIndustryRepository.save(subIndustry);
-    }
-
-    // TODO :Fix update SubIndustrys
-    public void updateSubIndustry(Long id, SubIndustry subIndustry) {
+    public void addSubindustries(SubIndustry subIndustry) {
         subIndustryRepository.save(subIndustry);
     }
 
     public void deleteSubIndustry(Long id) {
         subIndustryRepository.deleteById(id);
     }
+
 }

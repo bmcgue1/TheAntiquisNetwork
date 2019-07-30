@@ -73,6 +73,14 @@
 			<artifactId>java-jwt</artifactId>
 			<version>3.8.1</version>
 		</dependency>
+		<!--create connection to server to upload files-->
+		<!-- https://mvnrepository.com/artifact/com.jcraft/jsch -->
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>0.1.55</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

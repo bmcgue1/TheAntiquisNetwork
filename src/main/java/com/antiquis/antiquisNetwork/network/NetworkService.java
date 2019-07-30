@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class NetworkService {
@@ -19,12 +18,6 @@ public class NetworkService {
         return networks;
     }
 
-    //Network by id
-    public Optional<Network> getNetwork(Long id) {
-        Optional<Network> byId = networkRepository.findById(id);
-        return byId;
-    }
-
     //Add Network
     public void addNetworks(Network network) {
         networkRepository.save(network);
@@ -35,7 +28,7 @@ public class NetworkService {
         networkRepository.save(network);
     }
 
-    public void deleteNetwork(Long id) {
+    public void deleteNetworkById(Long id) {
         networkRepository.deleteById(id);
     }
 }

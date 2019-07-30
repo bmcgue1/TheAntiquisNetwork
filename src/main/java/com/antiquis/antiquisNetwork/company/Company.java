@@ -22,6 +22,9 @@ public class Company {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "logo")
+    private byte logo;
+
     @ManyToOne
     @JoinColumn(name = "industryId")
     private Industry industry;
@@ -29,6 +32,9 @@ public class Company {
     @OneToOne
     @JoinColumn(name = "networkId")
     private Network network;
+
+    @Column(name = "image")
+    private byte images;
 
     //TODO ADD: Company Logo
 }

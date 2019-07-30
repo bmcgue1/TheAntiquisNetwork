@@ -20,7 +20,6 @@ public class UserController {
 
 
     //Adds Users
-    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/sign-up")
     public void signUp(@RequestBody User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
@@ -29,7 +28,7 @@ public class UserController {
 
     //Get all users
     @GetMapping("/getAll")
-    public List<User> getAllUser() {
+       public List<User> getAllUser() {
         return userService.getAllUsers();
     }
 
@@ -45,7 +44,6 @@ public class UserController {
     }
 
     //Delete user
-    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("/delete/{id}")
     public void deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
